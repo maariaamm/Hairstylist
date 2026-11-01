@@ -546,3 +546,25 @@ textarea:focus {
   border-top: 3px solid var(--accent);
   padding: 1.5rem;
 }
+/* ----- FAQ page ----- */
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--white);
+  border-left: 4px solid var(--accent);
+  margin-bottom: 1rem;
+}
+
+.faq-item summary {
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-item p {
+  padding: 0 1.25rem 1rem;
+}
