@@ -376,3 +376,33 @@ HEADER AND NAVIGATION (hamburger menu on mobile)
   text-align: left;
   border-bottom: 1px solid #d8cdbb;
 }
+
+/* ----- Call to action ----- */
+
+.cta {
+  padding: 3.5rem var(--side);
+  background: var(--primary);
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--bg);
+}
+
+.cta p {
+  margin-bottom: 1.5rem;
+  color: var(--bg);
+}
+
+/* hover colours on a dark background */
+.cta .btn:hover,
+.cta .btn:focus-visible {
+  background: var(--bg);
+  border-color: var(--bg);
+  color: var(--primary);
+}
+
+/* Gold focus outline, visible on the dark background */
+.cta :focus-visible {
+  outline-color: var(--accent);
+}
