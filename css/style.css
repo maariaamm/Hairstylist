@@ -208,3 +208,31 @@ HEADER AND NAVIGATION (hamburger menu on mobile)
 }
 
 /* HOMEPAGE */
+
+.hero-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.hero-text {
+  padding: 2rem var(--side);
+  text-align: center;
+  background: var(--bg);
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-text p {
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+}
