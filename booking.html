@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skicka en bokningsförfrågan till Nina. välj tjänst, datum och tid.">
+    <title>Boka tid hos Nina</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Link for keyboard users to skip the menu -->
+    <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html">Nina</a>
+
+        <!-- Hamburger button, shown on small screens only -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Öppna meny" aria-expanded="false"
+            aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+            <ul>
+                <!-- aria-current marks the page the visitor is on -->
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="booking.html" aria-current="page">Tidsbokning</a></li>
+                <li><a href="gallery.html">Bild/Galleri</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!--  Booking request  -->
+        <section class="page-section" aria-labelledby="page-title">
+            <h1 id="page-title">Boka tid</h1>
+            <p class="page-intro">
+                Fyll i formuläret så återkommer vi med en bekräftelse via e-post.
+                Det här är en förfrågan, tiden är bokad först när vi har bekräftat den.
+            </p>
+
+            <!-- no-validate turns off the browser's own validation, JS validates instead -->
+            <form id="booking-form" novalidate>
+
+                <div class="form-group">
+                    <label for="b-name">Namn</label>
+                    <input type="text" id="b-name" name="name" autocomplete="name">
+                    <p class="error" id="b-name-error" role="alert"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="b-phone">Telefon</label>
+                    <input type="tel" id="b-phone" name="phone" autocomplete="tel">
+                    <p class="error" id="b-phone-error" role="alert"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="b-email">E-post</label>
+                    <input type="email" id="b-email" name="email" autocomplete="email">
+                    <p class="error" id="b-email-error" role="alert"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="b-service">Tjänst</label>
+                    <select id="b-service" name="service">
+                        <option value="">Välj tjänst</option>
+                        <option value="Hårfärg">Hårfärg</option>
+                        <option value="Klippning">Klippning</option>
+                        <option value="Styling">Styling</option>
+                    </select>
+                    <p class="error" id="b-service-error" role="alert"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="b-date">Datum</label>
+                    <input type="date" id="b-date" name="date">
+                    <p class="error" id="b-date-error" role="alert"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="b-time">Önskad tid</label>
+                    <select id="b-time" name="time">
+                        <option value="">Välj tid</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                    <p class="error" id="b-time-error" role="alert"></p>
+                </div>
+
+                <!-- Optional field, no validation needed -->
+                <div class="form-group">
+                    <label for="b-notes">Önskemål (valfritt)</label>
+                    <textarea id="b-notes" name="notes" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Skicka bokningsförfrågan</button>
+
+                <!-- Confirmation message written by JS after a successful submit -->
+                <p id="booking-success" class="success" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p class="logo">Nina</p>
+
+        <div class="footer-columns">
+            <section aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Kontakt</h2>
+                <address>
+                    Storgatan 1<br>
+                    123 45 Stockholm<br>
+                    <a href="tel:+46701234567">070-123 45 67</a><br>
+                    <a href="mailto:info@nina.se">info@nina.se</a>
+                </address>
+            </section>
+
+            <section aria-labelledby="footer-hours">
+                <h2 id="footer-hours">Öppettider</h2>
+                <p>Mån–Fre 09:00–18:00<br>Lör 10:00–15:00<br>Sön stängt</p>
+            </section>
+
+            <nav aria-labelledby="footer-links">
+                <h2 id="footer-links">Länkar</h2>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="booking.html">Tidsbokning</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p class="copyright">&copy; 2026 Nina.</p>
+    </footer>
+
+</body>
+
+</html>
