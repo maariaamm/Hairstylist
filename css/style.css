@@ -1,0 +1,123 @@
+/* Colour palette, fonts and side spacing stored as variables */
+:root {
+  --bg: #faf7f2; /* off-white: header and light sections */
+  --text: #1c1c1c; /* body text */
+  --primary: #111111; /* almost black: headings and dark sections */
+  --accent: #b8924a; /* gold: buttons and decorations */
+  --accent-dark: #735620; /* darker gold: text links  */
+  --surface: #efe6d8; /* beige: main page background */
+  --white: #ffffff;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
+
+  /* Side padding: at least 1rem, and content is centred (max 1100px) on wide screens */
+  --side: max(1rem, calc((100% - 1100px) / 2));
+}
+
+/* Make width and height include padding and border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Images never become wider than their container */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+/* Section h2 are centred by default */
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+address {
+  font-style: normal;
+}
+/*
+ BUTTONS, FOCUS STYLE AND SKIP LINK
+*/
+
+/* Main button style used for all booking links */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+/* Colours are inverted on hover and keyboard focus */
+.btn:hover,
+.btn:focus-visible {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--accent);
+}
+
+/* Clear outline for keyboard users (accessibility) */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Skip link: hidden above the page until it gets keyboard focus */
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 100;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/*
+     HEADER AND NAVIGATION (mobile: hamburger menu)
+    */
