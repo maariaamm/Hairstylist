@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vanliga frågor och svar om bokning, priser och avbokning hos Nina.">
+    <title>Vanliga frågor, FAQ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Link for keyboard users to skip the menu -->
+    <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html">Nina</a>
+
+        <!-- Hamburger button, shown on small screens only -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Öppna meny" aria-expanded="false"
+            aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="booking.html">Tidsbokning</a></li>
+                <li><a href="gallery.html">Bild/Galleri</a></li>
+                <!-- aria-current marks the page the visitor is on -->
+                <li><a href="faq.html" aria-current="page">FAQ</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- FAQ: questions that open and close  -->
+        <section class="page-section" aria-labelledby="page-title">
+            <h1 id="page-title">Vanliga frågor</h1>
+            <p class="page-intro">
+                Här hittar du svar på det vi oftast får frågor om.
+                Hittar du inte svaret kan du <a href="contact.html">kontakta oss</a>.
+            </p>
+
+            <!-- details and summary = open/close function without JS -->
+            <div class="faq-list">
+
+                <details class="faq-item">
+                    <summary>Behöver jag boka tid?</summary>
+                    <p>Ja, vi rekommenderar att du bokar tid i förväg så att vi kan avsätta rätt tid för dig. Du kan
+                        skicka en förfrågan på sidan <a href="booking.html">Tidsbokning</a>.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Hur lång tid tar ett besök?</summary>
+                    <p>En klippning tar ungefär 45–60 minuter. Hårfärgning och styling tar längre tid, ofta 1,5–3 timmar
+                        beroende på hårlängd och önskat resultat.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Vad kostar det?</summary>
+                    <p>Klippning kostar från 590 kr, styling från 690 kr och hårfärg från 990 kr. Det slutliga priset
+                        beror på hårlängd och hur mycket produkt som behövs.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Hur avbokar jag min tid?</summary>
+                    <p>Avboka senast 24 timmar före ditt besök via e-post eller telefon. Vid senare avbokning kan vi ta
+                        ut en avgift.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Vilka betalningssätt finns?</summary>
+                    <p>Du kan betala med kort eller Swish i salongen.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Kan jag ta med en bild på önskad frisyr?</summary>
+                    <p>Gärna! En bild hjälper oss att förstå vad du vill ha. Vi berättar sedan ärligt vad som är möjligt
+                        med ditt hår.</p>
+                </details>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p class="logo">Nina</p>
+
+        <div class="footer-columns">
+            <section aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Kontakt</h2>
+                <address>
+                    Storgatan 1<br>
+                    123 45 Stockholm<br>
+                    <a href="tel:+46701234567">070-123 45 67</a><br>
+                    <a href="mailto:info@nina.se">info@nina.se</a>
+                </address>
+            </section>
+
+            <section aria-labelledby="footer-hours">
+                <h2 id="footer-hours">Öppettider</h2>
+                <p>Mån–Fre 09:00–18:00<br>Lör 10:00–15:00<br>Sön stängt</p>
+            </section>
+
+            <nav aria-labelledby="footer-links">
+                <h2 id="footer-links">Länkar</h2>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="booking.html">Tidsbokning</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p class="copyright">&copy; 2026 Nina.</p>
+    </footer>
+
+</body>
+
+</html>
