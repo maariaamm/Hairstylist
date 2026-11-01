@@ -113,15 +113,7 @@ function todayString() {
   );
 }
 
-// COMMIT: feat: add shared helper functions for form validation
-
-/* ==========================================================
-   5. BOOKING REQUEST FORM
-   Used on: booking.html (form #booking-form)
-   Validates every field and shows a confirmation message.
-   Nothing is sent to a server (the site has no backend), the
-   request is only saved in localStorage.
-   ========================================================== */
+/*  BOOKING REQUEST FORM */
 
 function initBookingForm() {
   const form = document.getElementById("booking-form");
@@ -132,7 +124,7 @@ function initBookingForm() {
   dateInput.min = todayString();
 
   form.addEventListener("submit", function (e) {
-    // Stop the browser from sending the form, we handle it ourselves
+    // Stop the browser from sending the form
     e.preventDefault();
     clearErrors(form);
     let valid = true;
@@ -145,31 +137,27 @@ function initBookingForm() {
     const date = dateInput.value;
     const time = document.getElementById("b-time").value;
 
-    // Name
     if (name.length < 2) {
       setError("b-name", "Ange ditt namn (minst 2 tecken).");
       valid = false;
     }
 
-    // Phone
     if (!PHONE_PATTERN.test(phone)) {
       setError("b-phone", "Ange ett giltigt telefonnummer.");
       valid = false;
     }
 
-    // E-mail
     if (!EMAIL_PATTERN.test(email)) {
       setError("b-email", "Ange en giltig e-postadress.");
       valid = false;
     }
 
-    // Service
     if (!service) {
       setError("b-service", "Välj en tjänst.");
       valid = false;
     }
 
-    // Date: must be chosen, not in the past and on a day the salon is open
+    // Date must be chosen, not in the past and on a day the salon is open
     let dayHours = null; // opening hours for the chosen day, used to check the time
     if (!date) {
       setError("b-date", "Välj ett datum.");
@@ -190,7 +178,7 @@ function initBookingForm() {
       }
     }
 
-    // Time: must be chosen and before closing time on the chosen day
+    // Time must be chosen and before closing time on the chosen day
     if (!time) {
       setError("b-time", "Välj en tid.");
       valid = false;
@@ -204,19 +192,17 @@ function initBookingForm() {
       valid = false;
     }
 
-    // If something is wrong: show focus on the first error and stop here
+    // If something is wrong show focus on the first error and stop here
     if (!valid) {
       focusFirstError(form);
       return;
     }
 
-    // Everything is correct: save the request in localStorage
+    // if everything is correct save the request in localStorage
     const booking = { name, phone, email, service, date, time };
     try {
       localStorage.setItem("lastBooking", JSON.stringify(booking));
-    } catch (error) {
-      // localStorage can be blocked by the browser; the form still works without it
-    }
+    } catch (error) {}
 
     // Show a confirmation and empty the form
     document.getElementById("booking-success").textContent =
