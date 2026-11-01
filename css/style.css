@@ -406,3 +406,43 @@ HEADER AND NAVIGATION (hamburger menu on mobile)
 .cta :focus-visible {
   outline-color: var(--accent);
 }
+
+/* FOOTER */
+
+.site-footer {
+  padding: 2.5rem var(--side) 1.5rem;
+  background: var(--surface);
+  border-top: 1px solid var(--primary);
+  text-align: center;
+}
+
+.site-footer .logo {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile: footer columns are placed under each other */
+.footer-columns {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.site-footer h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer ul {
+  list-style: none;
+}
+
+.site-footer li {
+  margin-bottom: 0.25rem;
+}
+
+.copyright {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+  font-size: 0.85rem;
+}
