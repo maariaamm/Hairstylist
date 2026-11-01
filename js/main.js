@@ -52,14 +52,7 @@ function pad(number) {
   return String(number).padStart(2, "0");
 }
 
-// COMMIT: feat: add opening hours data and pad helper
-
-/* ==========================================================
-   3. OPEN/CLOSED STATUS
-   Used on: index.html (paragraph #open-status)
-   ========================================================== */
-
-// Writes a message about whether the salon is open right now
+// Writes a message (status) about whether the salon is open right now
 function updateOpenStatus() {
   const statusElement = document.getElementById("open-status");
   if (!statusElement) return;
@@ -72,12 +65,12 @@ function updateOpenStatus() {
     statusElement.textContent = "Vi har stängt idag.";
   } else if (currentHour < today.open) {
     statusElement.textContent =
-      "Vi har stängt just nu – vi öppnar kl " + pad(today.open) + ":00 idag.";
+      "Vi har stängt just nu! vi öppnar kl " + pad(today.open) + ":00 idag.";
   } else if (currentHour >= today.close) {
     statusElement.textContent = "Vi har stängt för idag.";
   } else {
     statusElement.textContent =
-      "Vi har öppet nu – vi stänger kl " + pad(today.close) + ":00.";
+      "Vi har öppet nu! vi stänger kl " + pad(today.close) + ":00.";
   }
 }
 
