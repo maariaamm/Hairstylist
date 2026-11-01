@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt formulär</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Nina</a>
+
+        <!-- Hamburger button, shown on small screens only -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Öppna meny" aria-expanded="false"
+            aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="booking.html">Tidsbokning</a></li>
+                <li><a href="gallery.html">Bild/Galleri</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" aria-current="page">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section class="page-section" aria-labelledby="page-title">
+            <h1 id="page-title">Kontakta oss</h1>
+            <p class="page-intro">
+                Har du en fråga om våra tjänster? Hör av dig, så svarar vi så snart vi kan.
+                Vill du boka en tid använder du i stället sidan <a href="booking.html">Tidsbokning</a>.
+            </p>
+
+            <div class="contact-layout">
+
+                <section class="contact-info" aria-labelledby="info-title">
+                    <h2 id="info-title">Kontaktuppgifter</h2>
+                    <address>
+                        Nina<br>
+                        Storgatan 1<br>
+                        123 45 Stockholm<br>
+                        Telefon: <a href="tel:+46701234567">070-123 45 67</a><br>
+                        E-post: <a href="mailto:info@nina.se">info@nina.se</a>
+                    </address>
+                </section>
+
+                <!-- Contact form -->
+                <section class="contact-form-wrapper" aria-labelledby="form-title">
+                    <h2 id="form-title">Skicka ett meddelande</h2>
+
+
+                    <form id="contact-form" novalidate>
+                        <!-- no-validate turns off the browser's own validation, JS validates instead -->
+
+                        <div class="form-group">
+                            <label for="c-name">Namn</label>
+                            <input type="text" id="c-name" name="name" autocomplete="name">
+                            <p class="error" id="c-name-error" role="alert"></p>
+                            <!-- empty p for JS to write an error message-->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="c-email">E-post</label>
+                            <input type="email" id="c-email" name="email" autocomplete="email">
+                            <p class="error" id="c-email-error" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="c-subject">Ämne</label>
+                            <input type="text" id="c-subject" name="subject">
+                            <p class="error" id="c-subject-error" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="c-message">Meddelande</label>
+                            <textarea id="c-message" name="message" rows="6"></textarea>
+                            <p class="error" id="c-message-error" role="alert"></p>
+                        </div>
+
+                        <button type="submit" class="btn">Skicka meddelande</button>
+
+                        <!-- Confirmation message written by JS after a successful submit -->
+                        <p id="contact-success" class="success" role="status"></p>
+                    </form>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p class="logo">Nina</p>
+
+        <div class="footer-columns">
+            <section aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Kontakt</h2>
+                <address>
+                    Storgatan 1<br>
+                    123 45 Stockholm<br>
+                    <a href="tel:+46701234567">070-123 45 67</a><br>
+                    <a href="mailto:info@nina.se">info@nina.se</a>
+                </address>
+            </section>
+
+            <section aria-labelledby="footer-hours">
+                <h2 id="footer-hours">Öppettider</h2>
+                <p>Mån–Fre 09:00–18:00<br>Lör 10:00–15:00<br>Sön stängt</p>
+            </section>
+
+            <nav aria-labelledby="footer-links">
+                <h2 id="footer-links">Länkar</h2>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="booking.html">Tidsbokning</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p class="copyright">&copy; 2026 Nina. </p>
+    </footer>
+
+</body>
+
+</html>
