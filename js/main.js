@@ -76,14 +76,6 @@ function updateOpenStatus() {
 
 updateOpenStatus();
 
-// COMMIT: feat: show open/closed status on the homepage
-
-/* ==========================================================
-   4. FORM HELPERS
-   Shared by the booking form and the contact form.
-   Each field has an error paragraph with the id "<field id>-error".
-   ========================================================== */
-
 // Simple patterns for e-mail and phone number
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_PATTERN = /^[0-9+\-\s]{7,15}$/;
@@ -114,7 +106,6 @@ function focusFirstError(form) {
 }
 
 // Returns today's date as "YYYY-MM-DD" in local time.
-// (toISOString() uses UTC and can give the wrong day late in the evening.)
 function todayString() {
   const now = new Date();
   return (
