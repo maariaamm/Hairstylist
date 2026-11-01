@@ -4,6 +4,8 @@ Webbplats för den fiktiva frisörsalongen **Salong Nina**, skapad som projektup
 
 🌐 **Publicerad webbplats:** https://maariaamm.github.io/Hairstylist/
 
+**Link to my Figma design:** https://www.figma.com/design/Lz3YiwRzp5yd7c3Hcmr4hz/Hairstylist?node-id=0-1&t=XDYWppLim8lUOHjT-1
+
 ## Sidor
 
 - **Startsida** (`index.html`) – presentation av salongen, tjänster, omdömen, öppettider och adress
