@@ -446,3 +446,103 @@ HEADER AND NAVIGATION (hamburger menu on mobile)
   border-top: 1px solid rgba(17, 17, 17, 0.15);
   font-size: 0.85rem;
 }
+
+/* 
+    BOOKING, CONTACT AND FAQ 
+   */
+
+.page-section {
+  padding: 3rem var(--side);
+}
+
+.page-section h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page-intro {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/*  Forms */
+
+.page-section > form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #8a8a8a;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Gold outline when a field is selected */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* Red border on fields with an error */
+[aria-invalid="true"] {
+  border-color: #b00020;
+}
+
+/* Error message under a field  */
+.error {
+  min-height: 1.2em;
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+/* Green confirmation message  */
+.success {
+  margin-top: 1rem;
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+/* ----- Contact page ----- */
+
+.contact-layout {
+  display: grid;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-layout h2 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.contact-info {
+  background: var(--white);
+  border-top: 3px solid var(--accent);
+  padding: 1.5rem;
+}
