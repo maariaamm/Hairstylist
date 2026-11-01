@@ -626,7 +626,6 @@ textarea:focus {
     gap: 3rem;
   }
 
-  /* Why choose us and reviews: three columns */
   .why-list,
   .review-list {
     grid-template-columns: repeat(3, 1fr);

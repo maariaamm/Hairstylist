@@ -1,3 +1,5 @@
+"use strict";
+
 function initMobileMenu() {
   const toggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("main-nav");
@@ -221,12 +223,7 @@ function initBookingForm() {
 
 initBookingForm();
 
-// COMMIT: feat: add booking form validation and confirmation message
-
-/* ==========================================================
-   6. CONTACT FORM
-   Used on: contact.html (form #contact-form)
-   ========================================================== */
+/* CONTACT FORM */
 
 function initContactForm() {
   const form = document.getElementById("contact-form");
@@ -267,7 +264,7 @@ function initContactForm() {
       return;
     }
 
-    // Everything is correct: show a confirmation and empty the form
+    // if everything is correct show a confirmation and empty the form
     document.getElementById("contact-success").textContent =
       "Tack för ditt meddelande! Vi svarar så snart vi kan.";
     form.reset();
@@ -275,5 +272,3 @@ function initContactForm() {
 }
 
 initContactForm();
-
-// COMMIT: feat: add contact form validation
