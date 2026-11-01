@@ -119,5 +119,92 @@ address {
 }
 
 /*
-     HEADER AND NAVIGATION (mobile: hamburger menu)
+HEADER AND NAVIGATION (hamburger menu on mobile)
     */
+.site-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem var(--side);
+  background: var(--bg);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+/* Logo text  */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Hamburger button: three bars on top of each other */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* One bar in the hamburger icon */
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--primary);
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+/* When the menu is open the bars turn into an X  */
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile menu: hidden by default */
+.main-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.main-nav.open {
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 1rem var(--side);
+  color: var(--primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Beige background when hovering a menu link */
+.main-nav a:hover {
+  background: var(--surface);
+}
+
+/* HOMEPAGE */
