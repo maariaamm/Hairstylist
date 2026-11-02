@@ -6,6 +6,8 @@ Webbplats för den fiktiva frisörsalongen **Salong Nina**, skapad som projektup
 
 **Link to my Figma design:** https://www.figma.com/design/Lz3YiwRzp5yd7c3Hcmr4hz/Hairstylist?node-id=0-1&t=XDYWppLim8lUOHjT-1
 
+### Skriftlig rapport - [Projektrapport (PDF)](projektuppgift-SalongNina.pdf)
+
 ## Sidor
 
 - **Startsida** (`index.html`) – presentation av salongen, tjänster, omdömen, öppettider och adress
